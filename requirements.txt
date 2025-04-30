@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+seaborn
+geopandas
+cartopy
+us
+scikit-learn
+econml
+statsmodels
+linearmodels
+scipy
+tqdm
+requests
+censusdata
