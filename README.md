@@ -4,7 +4,7 @@
 > Columbia University, SIPA <br>
 
 <br>
-Data is taken from the [Clean Investment Monitor (Rhodium Group)](https://www.cleaninvestmentmonitor.org/database/)
+Data is taken from the Clean Investment Monitor (Rhodium Group): https://www.cleaninvestmentmonitor.org/database/
 
 ## Setup
 ```bash
