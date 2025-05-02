@@ -3,6 +3,9 @@
 > April 2024 <br>
 > Columbia University, SIPA <br>
 
+<br>
+Data is taken from the [Clean Investment Monitor (Rhodium Group)](https://www.cleaninvestmentmonitor.org/database/)
+
 ## Setup
 ```bash
 git clone https://github.com/theomoers/clean-energy-investment.git
