@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 
 ## Running the analysis
-The code is developed for jupyter notebooks (`.ipynb`). It can also be run using the `.py` files but there are some longer processes that take quite long. It is easier to circumvent those by using the notebooks. <br>
+The code is developed for jupyter notebooks (`.ipynb`). It can also be run using the `.py` files but there are some data downloads and bootstrapping processes that take quite long. It is easier to circumvent those by using the notebooks. <br>
 <br>
 - `data_exploration.ipynb/.py` includes the code for the introduction of the paper. <br>
 - `political_analysis.ipynb/.py` includes the code for a preliminary political analysis of partisan dominance in each congressional district from 2018-2024. <br>
