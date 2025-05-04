@@ -10,7 +10,8 @@ Data is taken from the Clean Investment Monitor (Rhodium Group): https://www.cle
 ```bash
 git clone https://github.com/theomoers/clean-energy-investment.git
 cd clean-energy-investment
-# activate env
+conda create -n clean-energy-CF python=3.9 pip -y
+conda activate clean-energy-CF
 pip install -r requirements.txt
 ```
 
