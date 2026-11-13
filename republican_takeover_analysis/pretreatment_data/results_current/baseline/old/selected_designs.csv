@@ -1,0 +1,7 @@
+outcome,definition,selected_candidate,passes_design
+clean_announcements,original,,False
+clean_announcements,rank_half,,False
+manufacturing_announcements,original,,False
+manufacturing_announcements,rank_half,,False
+wind_solar_net_mw,original,,False
+wind_solar_net_mw,rank_half,,False

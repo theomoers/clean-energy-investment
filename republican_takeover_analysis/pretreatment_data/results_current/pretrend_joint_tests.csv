@@ -1,0 +1,7 @@
+model,outcome,F,restrictions,df_states,p,successful_draws
+baseline,clean_announcements,0.5907194646702886,3,24,0.6270671668956821,999
+baseline,manufacturing_announcements,1.703156487458249,3,24,0.1930329411819912,999
+baseline,wind_solar_net_mw,0.5605991089600765,3,24,0.6461802485552228,999
+expanded,clean_announcements,1.177903152019842,3,24,0.3389293303176574,999
+expanded,manufacturing_announcements,2.091517862680542,3,24,0.12792758387550562,999
+expanded,wind_solar_net_mw,0.9047772434889363,3,24,0.4533502889260511,999

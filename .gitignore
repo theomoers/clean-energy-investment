@@ -177,3 +177,22 @@ cython_debug/
 admin_and_presentation/
 00_archive/
 .DS_Store
+
+# Local research downloads, temporary libraries, and publication drafts.
+**/raw/
+.r-library/
+/data/CD-boundaries/
+/data/CleanInvestmentMonitor_Download/
+/data/MIT_election_lab/
+/data/RHG_PowerPlants_TS2026_20261106/
+/data/election_stats/
+/data/redesign_raw/
+/data/redesign_results/
+/original_paper/
+/revised_paper*/
+*.aux
+*.blg
+*.out
+*.synctex.gz
+**/__pycache__/
+/republican_takeover_analysis/pretreatment_data/rebuilt*/

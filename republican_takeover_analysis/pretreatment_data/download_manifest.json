@@ -1,0 +1,884 @@
+[
+  {
+    "file": "eia8602021.zip",
+    "url": "https://www.eia.gov/electricity/data/eia860/archive/xls/eia8602021.zip",
+    "reference_period": "2021",
+    "note": "2021 EIA-860 annual archive; historical revised file",
+    "retrieved_utc": "2026-11-07T18:14:47Z",
+    "bytes": 20114180,
+    "sha256": "ac35e582335ed5f82c1177361d6e8e82cff083ae85a5ec668815d21e0aef3ee5"
+  },
+  {
+    "file": "EC_CC_V1.xlsx",
+    "url": "https://home.treasury.gov/system/files/131/EC_CC_V1.xlsx",
+    "reference_period": "through 2023-02-07",
+    "note": "Use only separately dated closures before 2022; designation published 2023",
+    "retrieved_utc": "2026-11-07T18:14:45Z",
+    "bytes": 113680,
+    "sha256": "dd689c618125b068b69c6b34d1e9f73f33e7056a470824751cf9b4fcb05001ff"
+  },
+  {
+    "file": "EC_MSA_FFE_V1.xlsx",
+    "url": "https://home.treasury.gov/system/files/131/EC_MSA_FFE_V1.xlsx",
+    "reference_period": "2010-2020 employment",
+    "note": "2023 reconstruction from CBP facts released by April 2022; partial eligibility only",
+    "retrieved_utc": "2026-11-07T18:14:44Z",
+    "bytes": 72187,
+    "sha256": "a415d254c6037d7f4607fb7b38a64651280c12a0238db899aabecef11413f628"
+  },
+  {
+    "file": "cbp20co.zip",
+    "url": "https://www2.census.gov/programs-surveys/cbp/datasets/2020/cbp20co.zip",
+    "reference_period": "2020",
+    "note": "2020 County Business Patterns; broad battery/semiconductor industrial footprint",
+    "retrieved_utc": "2026-11-07T18:15:56Z",
+    "bytes": 11472306,
+    "sha256": "3df8fb3409bc5ae5691cd145a45b26f58a29652c4dd4e62f8e709c23fab60e8d"
+  },
+  {
+    "file": "acsdt5y2021-b01003.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b01003.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:14:54Z",
+    "bytes": 18447258,
+    "sha256": "8b663b4c019a5c173da08c2e0c389a82a393168894c5a31eb39cd4ddc794e82c"
+  },
+  {
+    "file": "acsdt5y2021-b17001.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b17001.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:15:10Z",
+    "bytes": 120256640,
+    "sha256": "4e37d8649fe76f24ae33b35066c73e1f103092b1ef37477be3ba39828a7d72cc"
+  },
+  {
+    "file": "acsdt5y2021-b15003.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b15003.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:15:16Z",
+    "bytes": 92894394,
+    "sha256": "5a18ff54755f22f8a4c157a3a96ddf9c047ae1961daf8c45d80ef07047339abe"
+  },
+  {
+    "file": "acsdt5y2021-b23025.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b23025.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:15:07Z",
+    "bytes": 40304409,
+    "sha256": "34e851c2905cb0e54c203ca8a8188b5b0aab1ec5d988b882195d48ae497fa096"
+  },
+  {
+    "file": "acsdt5y2021-b19025.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b19025.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:15:58Z",
+    "bytes": 20836350,
+    "sha256": "979523a2f9e66418570949efa4b4664cc2a8bc5d9738fab9fbba43d95ca73e03"
+  },
+  {
+    "file": "acsdt5y2021-b11001.dat",
+    "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/acsdt5y2021-b11001.dat",
+    "reference_period": "2017-2021",
+    "note": "Official ACS table-based summary file, released December 2022",
+    "retrieved_utc": "2026-11-07T18:16:03Z",
+    "bytes": 46035566,
+    "sha256": "28a434da075168c4ba758045587b265278833c2587849ba4b357d05fca3d1580"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-125_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-125&longitude-max=-120&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:57Z",
+    "bytes": 65622,
+    "sha256": "a67d04566d1ecee45815066bd9f1318062f52e684d8ae4444c1fcccedc27155d"
+  },
+  {
+    "file": "nasa_WS50M_-125_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-125&longitude-max=-120&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:58Z",
+    "bytes": 227050,
+    "sha256": "4d2aee1732de63a194950dda017f6ab92d9d253a03011c0618a30ab67d512059"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-125_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-125&longitude-max=-120&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:57Z",
+    "bytes": 65630,
+    "sha256": "7545953f8b3087a4c2afd05e8fa77c48846810d266a6decdb8ea6fe6f13906b5"
+  },
+  {
+    "file": "nasa_WS50M_-125_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-125&longitude-max=-120&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:58Z",
+    "bytes": 227559,
+    "sha256": "bed21d84f0e11962174bc5ced9c463a69b7eea87aa0aeea53efafc950bf7fe15"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-125_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-125&longitude-max=-120&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:58Z",
+    "bytes": 65709,
+    "sha256": "340e7d15e21b2c087d9d06a4992b9109aec4d489d11ba13b39aa8c2b470e4414"
+  },
+  {
+    "file": "nasa_WS50M_-125_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-125&longitude-max=-120&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 227508,
+    "sha256": "2565adb1188c6a4e805345c945f32c9b8ecc31e1888594bd407f135d9009390a"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-125_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-125&longitude-max=-120&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 65676,
+    "sha256": "eb0275417406a43797288057f5ed5e699556cd05083a56ff8da39139c35cda03"
+  },
+  {
+    "file": "nasa_WS50M_-125_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-125&longitude-max=-120&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 227278,
+    "sha256": "49b04b5cf1fb393e01d1fc0d8ca555fdf8d559a7133d183231790505248499a1"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-120_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-120&longitude-max=-115&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 65658,
+    "sha256": "02108c9c9cc413ba5b29a3fb0980c785d28231bc49dc0b5bb1f79deb5342401a"
+  },
+  {
+    "file": "nasa_WS50M_-120_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-120&longitude-max=-115&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 227075,
+    "sha256": "f02cd9043380493f944e7371649f57adfc0e5a8668b20da65623cf737287e0fc"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-120_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-120&longitude-max=-115&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:15:59Z",
+    "bytes": 65679,
+    "sha256": "452d10480404a254f7316e076ea2f2a19d5010f0ca6bedaf87c898fe420657ad"
+  },
+  {
+    "file": "nasa_WS50M_-120_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-120&longitude-max=-115&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:00Z",
+    "bytes": 227202,
+    "sha256": "e967f1ea8a1c7334e9793a28b70f03a55e623b5fd8b38c314ee3c05e2a607148"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-120_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-120&longitude-max=-115&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:00Z",
+    "bytes": 65707,
+    "sha256": "8b70779cdb1b9cf4ad4455a73b4e476f3b4f023a5c756cc4143f0b4fa0f979c4"
+  },
+  {
+    "file": "nasa_WS50M_-120_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-120&longitude-max=-115&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:00Z",
+    "bytes": 227238,
+    "sha256": "8797cb0511cd85229601529951831d060e5ddd60eaa049076330fc04e2f263e9"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-120_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-120&longitude-max=-115&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:01Z",
+    "bytes": 65692,
+    "sha256": "0541206204131df5645a14e9cc43b10ef774476fc6fd95055e60ce233a36081d"
+  },
+  {
+    "file": "nasa_WS50M_-120_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-120&longitude-max=-115&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:01Z",
+    "bytes": 227184,
+    "sha256": "945f0f47378c1db9117101fbf916d892dc1a0f95fe3336f0aaf451305df49a79"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-115_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-115&longitude-max=-110&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:01Z",
+    "bytes": 65674,
+    "sha256": "76780a9d9802ba28f318deea95c93d8f1dcdbfe649858abf8da5568173a35a0c"
+  },
+  {
+    "file": "nasa_WS50M_-115_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-115&longitude-max=-110&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:01Z",
+    "bytes": 227186,
+    "sha256": "900cbf60ee5139450436fad39f1628b042f8dbcce4ad1504212057017180d422"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-115_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-115&longitude-max=-110&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:01Z",
+    "bytes": 65717,
+    "sha256": "3fa10d1c2f1c2c73ccf18ba8142feaffbfb311c48f26337fb1afd34685126ed0"
+  },
+  {
+    "file": "nasa_WS50M_-115_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-115&longitude-max=-110&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:02Z",
+    "bytes": 227264,
+    "sha256": "f458c919f31c8ebea7b106ae84cf5c03fcb12fe856979c74c185e54b7260f32a"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-115_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-115&longitude-max=-110&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:02Z",
+    "bytes": 65697,
+    "sha256": "2af1c4915c49678fadceb8da2f1b327ecb20d817ce7bb636df096bdcd365bbde"
+  },
+  {
+    "file": "nasa_WS50M_-115_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-115&longitude-max=-110&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:02Z",
+    "bytes": 227232,
+    "sha256": "db7a1dfcb589558d826855a514e8be3e4ef44fe7952e67155442ea9de1ae6d62"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-110_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-110&longitude-max=-105&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:03Z",
+    "bytes": 65693,
+    "sha256": "09edcef7d0af3b2aaa72127130f03cc6abe85dd92f845016b24c7a34aea7b78a"
+  },
+  {
+    "file": "nasa_WS50M_-110_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-110&longitude-max=-105&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:03Z",
+    "bytes": 227219,
+    "sha256": "af045bd255dedb506b21726ddfd0049ead5e1605526cf72da16302dff240a418"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-110_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-110&longitude-max=-105&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:03Z",
+    "bytes": 65718,
+    "sha256": "3d8a20fd5b38397dd8bd1c72eb9b784d2b5efd52b98f79044deae480f0af4c63"
+  },
+  {
+    "file": "nasa_WS50M_-110_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-110&longitude-max=-105&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:04Z",
+    "bytes": 227280,
+    "sha256": "682bb033999730529c1b2215ecb9ce8ebc43631327f69e49c0eeb0db5fb08708"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-110_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-110&longitude-max=-105&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:03Z",
+    "bytes": 65691,
+    "sha256": "30ebce2c409695b6d86fb1b4f0623af391defe6e0066d1263e7fb421892fed2b"
+  },
+  {
+    "file": "nasa_WS50M_-110_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-110&longitude-max=-105&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:04Z",
+    "bytes": 227455,
+    "sha256": "1ec4ac637d04e79dd0cc12b111b9c929001224b55d20e65605ce5b216c4ae5ac"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-105_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-105&longitude-max=-100&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:05Z",
+    "bytes": 65653,
+    "sha256": "5f5432971ca354f343d37b0fc9c9a89991b0e6789283ba80a559a879ee48b8e2"
+  },
+  {
+    "file": "nasa_WS50M_-105_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-105&longitude-max=-100&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:04Z",
+    "bytes": 227228,
+    "sha256": "0d10e2744a91a6b8b329a4672c028fbb7cd0e935d27d17ace4fae77e23b388d6"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-105_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-105&longitude-max=-100&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:04Z",
+    "bytes": 65695,
+    "sha256": "32b60aaef2686f7df8d85e03f334ea8f93162b989cfcc0ca61ac3bfaed68a10e"
+  },
+  {
+    "file": "nasa_WS50M_-105_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-105&longitude-max=-100&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:05Z",
+    "bytes": 227222,
+    "sha256": "be099ccaea88a5b24fea2c94ef68f2b049207d4f052b489cb8bd2e4e941757c5"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-105_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-105&longitude-max=-100&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:05Z",
+    "bytes": 65682,
+    "sha256": "c110b35f21a75ea4df5e3495b9977030487c152e7ebdf6f0a92546e6b7f888be"
+  },
+  {
+    "file": "nasa_WS50M_-105_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-105&longitude-max=-100&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:05Z",
+    "bytes": 227174,
+    "sha256": "f6314ff86dd56c286b796d3be69fdec09fa11567cb935c9978418aeb26e1eb1a"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-105_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-105&longitude-max=-100&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:05Z",
+    "bytes": 65659,
+    "sha256": "dc0c78251ccd3f4ea7027558be1beb9cdfcbea03b3d44b5d381d2aaced722337"
+  },
+  {
+    "file": "nasa_WS50M_-105_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-105&longitude-max=-100&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 227320,
+    "sha256": "d151aa82eca4d65cc923af3da19a2dfe05e4630b69f1a480ef310c978185995d"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-100_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-100&longitude-max=-95&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 65635,
+    "sha256": "247b1b821c37682b17344d5c4e38d7de047cc1fb8c8d3226e8bc2ec3b4d3809c"
+  },
+  {
+    "file": "nasa_WS50M_-100_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-100&longitude-max=-95&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 226986,
+    "sha256": "0430956f8b2a37703ebcbc43d009703195040a9dca14750952b7ead0105c6cfb"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-100_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-100&longitude-max=-95&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 65631,
+    "sha256": "4b5d196e781bf2599fc5e7fbc43796b731af908dda82f018bea3db6f491c13ba"
+  },
+  {
+    "file": "nasa_WS50M_-100_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-100&longitude-max=-95&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 227038,
+    "sha256": "f3ed9f952be6409f4025a1dbece197a40db0425791e7242434742845df3187bf"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-100_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-100&longitude-max=-95&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:06Z",
+    "bytes": 65602,
+    "sha256": "e506439473a8b73e0ac9e17ae6802157e3b39eeec03aa8154f527037db701a6a"
+  },
+  {
+    "file": "nasa_WS50M_-100_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-100&longitude-max=-95&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 227042,
+    "sha256": "7959880ed3776f6644b4bf734eff7f3c9e13041dc5fcd320c0d3bb0a9134474f"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-100_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-100&longitude-max=-95&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 65632,
+    "sha256": "fcafd9d1c0fe1b19b9e3ad66bda0de1c2e4e71b6803daa08539a22bf99d71558"
+  },
+  {
+    "file": "nasa_WS50M_-100_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-100&longitude-max=-95&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 226991,
+    "sha256": "657f21ae0d38870afba0bf02fa29b3f9886fb1f33c33c545de9987cefb0baee2"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-100_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-100&longitude-max=-95&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 65647,
+    "sha256": "3f65e2e7376a9e75de92c361311ef9d3bcfd69297de9c5ac51a9cf8a948b5f05"
+  },
+  {
+    "file": "nasa_WS50M_-100_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-100&longitude-max=-95&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 227091,
+    "sha256": "c092ab4a5ea5fe08a5fc08a966ff70d68bfd1791568113455bccf1a9fc9e8430"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-95_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-95&longitude-max=-90&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:07Z",
+    "bytes": 65585,
+    "sha256": "f4ede0fcdb453aa0ade5ef0aee100f14ccf10587d981c5413192465573e8f5b9"
+  },
+  {
+    "file": "nasa_WS50M_-95_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-95&longitude-max=-90&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:08Z",
+    "bytes": 226812,
+    "sha256": "7291505c6cda4a63312351a034fd0660ea3c7ee38cadc3a1e7530cf869585a1c"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-95_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-95&longitude-max=-90&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:08Z",
+    "bytes": 65650,
+    "sha256": "0219b906461ececccd7011d130c5565120f4c4d575e11885a09f59f09548863e"
+  },
+  {
+    "file": "nasa_WS50M_-95_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-95&longitude-max=-90&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:08Z",
+    "bytes": 226979,
+    "sha256": "03d6e854d733576bd9feb59cd9803b953d695e690995bf961ef0c4ee1db97af7"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-95_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-95&longitude-max=-90&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:08Z",
+    "bytes": 65671,
+    "sha256": "a877dded550a0f73d507882a6cf31c89262e7cbb3eb3ae1f109fc164e1954228"
+  },
+  {
+    "file": "nasa_WS50M_-95_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-95&longitude-max=-90&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:09Z",
+    "bytes": 227085,
+    "sha256": "98b5cda756cd1754529431af874ec336d012a7b2b6f38b7c9ba7b595de2cdb14"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-95_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-95&longitude-max=-90&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:08Z",
+    "bytes": 65614,
+    "sha256": "04db0f5a0260c75ef163d30fcd7d044eb9dfcdb3020fcd183bcbcf04a47b884b"
+  },
+  {
+    "file": "nasa_WS50M_-95_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-95&longitude-max=-90&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:16Z",
+    "bytes": 227073,
+    "sha256": "13cfc3fde148910353b008d42800604b6610113ccbc5497911e00722ad1be78b"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-95_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-95&longitude-max=-90&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:09Z",
+    "bytes": 65692,
+    "sha256": "17c2aaee8e1cf6bff054bf493d5cd5b2dac50ea8eae46fd0b0057ad63e30e1e2"
+  },
+  {
+    "file": "nasa_WS50M_-95_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-95&longitude-max=-90&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:09Z",
+    "bytes": 227088,
+    "sha256": "02326c88c80d565192b071b18691f1a4bf06864607f77d6ed98451f2dff3c4ec"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-90_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-90&longitude-max=-85&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:09Z",
+    "bytes": 65577,
+    "sha256": "c616f7a4db307fda752663377bcea7dd261091b36874185affd183edd4a56489"
+  },
+  {
+    "file": "nasa_WS50M_-90_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-90&longitude-max=-85&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:10Z",
+    "bytes": 226805,
+    "sha256": "4e452060bf45cfc9eebbe365a367a8d06dd3584888bbf69879e0f671b02d384b"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-90_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-90&longitude-max=-85&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:10Z",
+    "bytes": 65663,
+    "sha256": "fdd7829d253328ee0b6ab63a4ef5315b304a8a273464cb18f6d9d233a0010e57"
+  },
+  {
+    "file": "nasa_WS50M_-90_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-90&longitude-max=-85&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:11Z",
+    "bytes": 227040,
+    "sha256": "bd1d72b29773ce33fd40fcd265d41a677d72c3bc6aecb2831e844a8cbc69da4c"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-90_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-90&longitude-max=-85&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:10Z",
+    "bytes": 65616,
+    "sha256": "56a90bcd244b4da85d132890f785c9d196fe11a0015207f8cd5898df7de8624b"
+  },
+  {
+    "file": "nasa_WS50M_-90_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-90&longitude-max=-85&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:11Z",
+    "bytes": 227087,
+    "sha256": "63585f2980818b9cd9567eaeaa33bc0595a53275318e1f55f671f88af557ea96"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-90_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-90&longitude-max=-85&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:11Z",
+    "bytes": 65644,
+    "sha256": "5b4c008791fe72e7c22b4e370ef18fccc469fd88cdef7c937d3152891afefd68"
+  },
+  {
+    "file": "nasa_WS50M_-90_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-90&longitude-max=-85&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:12Z",
+    "bytes": 227086,
+    "sha256": "a55ae3db06d2b363ce3abe7c84fd3ad9e4ee148460b701370cb69c4d6e3b69bd"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-90_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-90&longitude-max=-85&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:12Z",
+    "bytes": 65566,
+    "sha256": "a668c2e92551d02990512e279102dc70a69095816cd76de0a9cf98077acd21f0"
+  },
+  {
+    "file": "nasa_WS50M_-90_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-90&longitude-max=-85&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:12Z",
+    "bytes": 227086,
+    "sha256": "ecbd5148c64fb6bba1d582b87e7d792b791a7b7afb0d3273eb1904fbab7e52a6"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-85_20.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=20&latitude-max=25&longitude-min=-85&longitude-max=-80&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:18Z",
+    "bytes": 65623,
+    "sha256": "2b185adaba7d9467b1619b16a5922238c929fdf473e0002d49794dec346016da"
+  },
+  {
+    "file": "nasa_WS50M_-85_20.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=20&latitude-max=25&longitude-min=-85&longitude-max=-80&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:13Z",
+    "bytes": 226824,
+    "sha256": "289425cdd70477275a702f4f25824ebc9b155356e52bda7ec8ff9a9eea9dec1e"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-85_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-85&longitude-max=-80&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:14Z",
+    "bytes": 65594,
+    "sha256": "a8ddf4286f62b02cd5b81f30bf245425b658a237bd9d3e222124747f62646735"
+  },
+  {
+    "file": "nasa_WS50M_-85_25.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=25&latitude-max=30&longitude-min=-85&longitude-max=-80&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:15Z",
+    "bytes": 226854,
+    "sha256": "b4c07b85f333c59f281d097cbdef3c07b8913595383fe77c0beb2e9a57dd1fdb"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-85_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-85&longitude-max=-80&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:15Z",
+    "bytes": 65612,
+    "sha256": "b0429309d68f2f74174ffa57cedbc932b72f851b238b4a4c12d0c52ecb55150d"
+  },
+  {
+    "file": "nasa_WS50M_-85_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-85&longitude-max=-80&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:16Z",
+    "bytes": 227042,
+    "sha256": "18cf63939e06b7690981883e77953a1115476b9fcde288da5c18ad0827d489f0"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-85_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-85&longitude-max=-80&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:17Z",
+    "bytes": 65641,
+    "sha256": "f73c7bc4da75f2d0fa1480c324766061979ac3c9eb4bca4cf3acadc6ba2c662a"
+  },
+  {
+    "file": "nasa_WS50M_-85_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-85&longitude-max=-80&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:17Z",
+    "bytes": 227009,
+    "sha256": "0ce1d96fd5c8175d0420c9e00816077dac2ab0290fbc42b5ac87dc4b1eb9bf5c"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-85_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-85&longitude-max=-80&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:18Z",
+    "bytes": 65623,
+    "sha256": "c46a64ba9b55a852aea3e700eb7a9fb1b81d3e3c92feb0540e712c7aa320075b"
+  },
+  {
+    "file": "nasa_WS50M_-85_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-85&longitude-max=-80&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:18Z",
+    "bytes": 227108,
+    "sha256": "862cad91abc0a3d491b87e00a1c203ec7715a1a282fd08fe5d17140d0af062d3"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-80_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-80&longitude-max=-75&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 65601,
+    "sha256": "180464507580ff6a4a72577d0c05092197be73ef8d0c7e25f0e94d866be8cf95"
+  },
+  {
+    "file": "nasa_WS50M_-80_30.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=30&latitude-max=35&longitude-min=-80&longitude-max=-75&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 227014,
+    "sha256": "25a5e2241a8d47445a0286b48807c631d0b10873dbe6e301b9f5f23f89f7bc05"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-80_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-80&longitude-max=-75&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 65642,
+    "sha256": "8e88338e67d82f11e2d9cc2c3b6e3d3a30de1826efb46482cd58d79ce49e8ecd"
+  },
+  {
+    "file": "nasa_WS50M_-80_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-80&longitude-max=-75&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 227021,
+    "sha256": "4d0b11a9f7c41d2caeb286506b7538343adbd0d7781391e945b48cc6e58cce2c"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-80_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-80&longitude-max=-75&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 65613,
+    "sha256": "e362366f4533b093c1fd102a7e5850ae19189dc2d7b3572ba43643bcd26c5f46"
+  },
+  {
+    "file": "nasa_WS50M_-80_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-80&longitude-max=-75&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 227055,
+    "sha256": "659c62692ad2970d606ecc7bf53b62ba5255faa43fcf26fc0ef0182fa2d88200"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-75_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-75&longitude-max=-70&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:19Z",
+    "bytes": 65591,
+    "sha256": "1541d48d844a07a30b77a8a0caa172a5367c2527c3fde5e09fb5a03a562eb547"
+  },
+  {
+    "file": "nasa_WS50M_-75_35.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=35&latitude-max=40&longitude-min=-75&longitude-max=-70&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:20Z",
+    "bytes": 229105,
+    "sha256": "a5394c2dcdfb51fb57203dabe06c00a96130fa9c49ad970528e876ec45b171ee"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-75_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-75&longitude-max=-70&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:20Z",
+    "bytes": 65621,
+    "sha256": "76122d26d8fbd2780d54b9d953c2fb098b8c1a8b68c526cf5956787b8732098d"
+  },
+  {
+    "file": "nasa_WS50M_-75_40.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=40&latitude-max=45&longitude-min=-75&longitude-max=-70&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:20Z",
+    "bytes": 227318,
+    "sha256": "28348d964a919b19431707154bfd60785f165550ab24644f9fe8bdcdba88ff2b"
+  },
+  {
+    "file": "nasa_ALLSKY_SFC_SW_DWN_-75_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-75&longitude-max=-70&parameters=ALLSKY_SFC_SW_DWN&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:20Z",
+    "bytes": 65608,
+    "sha256": "4b6f446d7ef870be55eb88e54089c0554a26c8b465d349f4479e3ffa3d7dae9b"
+  },
+  {
+    "file": "nasa_WS50M_-75_45.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/monthly/regional?latitude-min=45&latitude-max=50&longitude-min=-75&longitude-max=-70&parameters=WS50M&community=RE&start=2010&end=2021&format=JSON",
+    "reference_period": "2010-2021",
+    "note": "NASA POWER retrospective physical resource, monthly regional native grid",
+    "retrieved_utc": "2026-11-07T18:16:21Z",
+    "bytes": 227092,
+    "sha256": "7e513285e2cfbb621d468664d0a468b917bd7f5719d88d397abfb5f5276f0aad"
+  }
+]

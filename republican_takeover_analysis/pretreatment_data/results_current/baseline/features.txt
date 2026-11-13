@@ -1,0 +1,9 @@
+log_clean_capacity
+log_fossil_capacity
+log_prior_announcements
+log_core_area
+prior_announcement_slope
+log_prior_manufacturing
+prior_manufacturing_slope
+prior_net_mw
+prior_net_mw_slope

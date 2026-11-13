@@ -1,0 +1,169 @@
+OVERLAP-TARGETED CAUSAL FOREST: EMPIRICAL HANDOFF
+2026-11-06
+
+BOTTOM LINE
+
+The area-level forest retains all 196 eligible areas in 25 states, rather than
+66 matched areas in 19 states. It does NOT establish more precise average
+effects or validated causal heterogeneity. Overall weighting balances measured
+means very closely, but that balance does not survive inside the learned
+high/low groups. Attempts to restore within-group comparison support fail.
+
+This result is not evidence of zero effects or homogeneous effects. The
+overlap-targeted forest is a useful exploratory extension, not grounds for
+claiming that the confounding problem is solved.
+
+SAMPLE AND IMPLEMENTATION
+
+- Same frozen data, political assignment, fixed geography and years as before.
+- 110 Republican and 86 Democratic areas, including zero-project areas.
+- Post-period counts: 922 clean-power and 113 manufacturing announcements
+  across all eligible areas (741/181 clean and 78/35 manufacturing in R/D areas).
+  These are project counts, not independent political experiments.
+- Weighting's Kish effective sample sizes are 50.71 Republican and 33.98
+  Democratic areas. The weighted effective number of states is about 16.47.
+- Nine pre-2022 adjustment variables plus state indicators in the propensity.
+- Area-level GRF causal forest, not duplicated pair rows. Four predetermined
+  effect modifiers; all nine covariates and state indicators enter the auxiliary
+  outcome model. Honest trees, 4000 trees, state clusters, fixed seeds/settings.
+- Propensities are supplied to the residualized forest; no second set of
+  arm-dependent overlap weights is passed as training sample weights.
+- Native GRF overlap aggregation is an overlap-targeted residual regression;
+  it is not simply an average of the forest's individual effect predictions.
+- Full-sample propensities use X and party, not outcomes. They are not fully
+  cluster-cross-fitted nuisance estimates. The auxiliary outcome model uses
+  cluster-OOB predictions, which do not learn an unseen state's fixed intercept.
+  This is model-assisted estimation, not a claimed fully cluster-cross-fitted,
+  doubly robust DiD procedure.
+
+AVERAGE RESULTS: EXACT LOGISTIC OVERLAP WEIGHTING
+
+Outcome per area-year          Estimate    95% interval           p
+Clean-power announcements      -0.428      [-1.304,  0.448]       .324
+Manufacturing announcements    -0.034      [-0.331,  0.262]       .813
+Net wind/solar capacity MW      19.12       [-14.14, 52.38]        .247
+
+These reproduce the earlier overlap-weighted effects AND uncertainty. The
+state bootstrap refits weights and preserves repeated-state multiplicity.
+All three Holm-adjusted political-effect tests are nonsignificant.
+
+The model-assisted native GRF overlap scores are also nonsignificant:
+clean -0.479 [-1.428, 0.470]; manufacturing -0.039 [-0.303, 0.226];
+capacity 20.70 MW [-11.82, 53.22]. These intervals condition on the nuisance
+fits and are supplementary, not substituted for the refitted-weight bootstrap.
+
+The exact-weighting standard errors are larger than in matching:
+clean 0.424 versus 0.353; manufacturing 0.144 versus 0.084; capacity 16.12
+versus 11.27 MW. Different target populations prevent treating this as a pure
+efficiency experiment, but there is no observed precision improvement.
+
+OVERALL CONFOUNDING DIAGNOSTICS
+
+Maximum absolute SMD on the nine included covariate means: 4.1e-9.
+This is mean balance, not equality of complete distributions or unobservables.
+
+Refitted-weight joint pre-period tests:
+clean-power p=.303; manufacturing p=.139; capacity p=.273.
+These do not reject differential pre-trends. They do not establish equivalent
+trends; power is limited and early pre-outcomes already enter the design.
+The 2022-minus-2021 placebo, trend-adjusted changes and exclusion-of-2022
+results are saved alongside the main results.
+
+HELD-OUT FOREST VALIDATION
+
+The fixed split uses 95 training areas in 15 states and 101 evaluation areas in
+10 other states. Training outcomes and evaluation outcomes are state-disjoint.
+Training OOB predictions weighted by e(1-e) define the median cutoff. The
+evaluation cutoff is NOT redefined to force equally sized groups.
+
+Outcome          High/low areas   High-minus-low    Diagnostic 95% interval
+Clean power          17 / 84          0.454         [-3.096,   4.005]
+Manufacturing        76 / 25         -0.087         [-0.412,   0.238]
+Capacity             62 / 39        -32.33 MW        [-122.24, 57.58]
+
+All three high-minus-low tests are nonsignificant; Holm p-values are all 1.
+These are raw overlap-weighted held-out comparisons, not doubly robust
+subgroup scores. Their causal interpretation additionally requires within-group
+comparability. The following failures mean the displayed intervals are
+diagnostics, not validated evidence about causal heterogeneity:
+
+1. CLEAN POWER:
+   High group effective sizes are only 4.23 R and 3.67 D areas.
+   Max within-group covariate SMD=1.18; max state-indicator SMD=3.21.
+
+2. MANUFACTURING:
+   Low group effective Democratic size is 4.88 areas and has zero observed
+   post-period Democratic manufacturing announcements.
+   Max within-group covariate SMD=1.13; max state-indicator SMD=1.13.
+
+3. CAPACITY:
+   Both groups pass the prespecified minimum area/ESS support check.
+   Max within-group covariate SMD=.46; max state-indicator SMD=.63.
+   Thus balance still fails the .10-SD credibility threshold.
+
+No outcome passes BOTH the prespecified support and balance requirements.
+Mean balance overall does not imply balance within a forest-defined subgroup.
+Failure of these raw subgroup comparisons is not a proof that conditional
+heterogeneity cannot exist or that every individual forest prediction is zero.
+
+WITHIN-GROUP RECALIBRATION ATTEMPT
+
+Requiring the same evaluation states to contain both parties in both learned
+groups leaves only one common state for clean power, two for manufacturing,
+and four for capacity. Re-estimating nine-covariate/state overlap models within
+these smaller groups leads to separation/convergence problems or ESS near
+one. No recalibrated comparison meets the support requirements, so no repaired
+heterogeneity interval is claimed.
+
+WHAT THIS SUPPORTS
+
+Use overlap weighting as a broader-sample average-effect comparison and retain
+matching as a robustness design. The current forest may remain an exploratory
+ML component, but weighting has not earned a stronger heterogeneity claim.
+Do not replace the paper's cautions with a claim that larger nominal N solved
+confounding or found no effects.
+
+The estimand is still the Republican-minus-Democratic response to the national
+majority transition, among overlap areas, conditional on weighted parallel
+trends and no differential contemporaneous shocks. Both groups change majority
+status. It is not the effect of the IRA/45X credit, not gain versus an unaffected
+group, and not causal effects of individual covariates. Geography-consistent
+resource, grid, socioeconomic and incentive-exposure variables remain missing.
+
+REPLICATION AND OUTPUTS
+
+From the repository root:
+conda run -n clean-investment-causal python republican_takeover_analysis/overlap_forest/run.py --out republican_takeover_analysis/overlap_forest/new_run --bootstrap-reps 999
+
+The output directory must not already exist. Python uses the main
+clean-investment-causal environment and /usr/local/bin/Rscript with the existing
+GRF library under /private/tmp/clean-grf-r46 (override TAKEOVER_R_LIB if needed).
+
+Canonical outputs: results_current/
+Fresh deterministic rebuild: replication/
+Reproduction record: REPLICATION.json
+Earlier implementation runs: development_archive/
+
+Key files:
+- areas.csv, folds.csv: sample, weights, training/evaluation states.
+- overall_balance.csv, weighted_joint_pretests.csv: overall diagnostics.
+- weighted_effects_and_annual.csv: primary averages and annual/pre-period checks.
+- forest_predictions.csv, nuisance_predictions.csv: complete predictions.
+- native_overlap_score.csv: supplementary model-assisted GRF averages.
+- heldout_support.csv, heldout_balance.csv: independent support/balance audit.
+- heldout_validation.csv: all high/low, placebo and sensitivity comparisons.
+- recalibration_status.csv, recalibrated_support.csv: failed repair audit.
+- heterogeneity_credibility.csv: prespecified support-and-balance decisions.
+- weighted_pretrends.png, heldout_comparisons.png: visually checked diagnostics.
+
+All 22 files agree byte-for-byte between the canonical run and fresh rebuild.
+Prior overlap effects/uncertainty were reproduced; the native GRF overlap score
+and clustered SE were independently verified by residual OLS and a Python
+cluster-sandwich calculation. Input and code hashes are saved. Manuscript and
+all earlier analyses are unchanged.
+
+METHOD DOCUMENTATION
+https://grf-labs.github.io/grf/reference/causal_forest.html
+https://grf-labs.github.io/grf/reference/average_treatment_effect.html
+https://grf-labs.github.io/grf/REFERENCE.html
+https://www2.stat.duke.edu/~fl35/papers/psweight_final.pdf

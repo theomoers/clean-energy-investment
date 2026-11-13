@@ -1,0 +1,190 @@
+ADDITIONAL PRE-TREATMENT DATA AND CAUSAL FOREST AUDIT
+2026-11-07
+
+BOTTOM LINE
+
+Downloaded the additional public data and added twelve predetermined measures
+to the original nine controls. This improves measured overall confounder
+balance considerably. It does not deliver a credible, validated finding of
+heterogeneous political effects or evidence that the effect is zero.
+
+The richer data reveal that the original weighting left major socioeconomic
+differences: under the original unpenalized nine-control weights, poverty and
+unemployment differed by about 1.04 and .98 standard deviations, respectively.
+This is useful evidence about previously unmeasured confounding, not a reason
+to omit the new controls when they make inference harder.
+
+DATA ADDED
+
+98 official source responses, approximately 383 MB, with URLs and SHA256 hashes.
+- ACS 2017-2021: population density, poverty, unemployment, college attainment
+  and mean household income, constructed for the actual fixed geographic cores.
+- NASA POWER 2010-2021 solar radiation and 50m wind-speed grids.
+- EIA-860 2021 high-voltage plant-connection proximity (two controls).
+- Pre-2022 coal-closure exposure, pre-2021 fossil-employment exposure, and
+  2020 battery/semiconductor industrial density (three IRA-related proxies).
+
+All 196 areas remain. Resource-grid coverage is complete; ACS tract-area
+coverage is at least 99.91%. Read DATA_SOURCES.txt for definitions and caveats.
+Grid proximity is NOT available interconnection capacity. The IRA variables
+are reconstructed pre-existing conditions, NOT credit claims or exact 45X
+eligibility. Later published Treasury lists are not described as information
+available to firms in 2021. No post-treatment awards/projects enter controls.
+
+WHAT WAS ESTIMATED
+
+Retained the 2023 Republican takeover design, outcome definitions and fixed
+state-disjoint split (95 training areas/15 states; 101 evaluation areas/10
+states). Republicans gain House-majority alignment; Democrats lose it. Neither
+group is unaffected by the national turnover. This is not an estimate of the
+IRA's overall effect or of causal effects of resources, income or grid access.
+
+Compared the nine-control baseline with a prespecified 21-control model.
+The expanded forest allows all 21 controls to modify effects. Forests and
+arm-specific outcome models use training outcomes only. The old forest ranking
+is also evaluated with expanded adjustment, separating adjustment from
+relearning. Ridge outcome tuning is leave-one-training-state-out only.
+Propensity estimation uses party/X in all areas, not a fully state-cross-fitted
+design. Because the overlap tilt depends on the estimated propensity, the
+entire target is not automatically doubly robust. Bootstrap intervals hold
+trained forests and outcome models fixed and do not capture every source of
+training or covariate-measurement uncertainty.
+
+The evaluation states have been examined in earlier analyses. They are held
+out of forest fitting, but are NOT a newly untouched confirmatory sample.
+Results from this methodological extension should be treated as exploratory.
+
+OVERLAP AND BALANCE
+
+The unpenalized expanded model nearly separates the full sample and completely
+separates the 95 training observations (fitted propensities essentially zero
+or one). Full-sample effective counts fall to roughly 12 R and 10 D. This may
+partly reflect high-dimensional finite-sample overfitting; it is not proof
+that the population has no common support.
+
+The prespecified outcome-free rule therefore uses a fixed .01 ridge penalty
+on standardized covariates, with unpenalized state intercepts, in both the
+baseline and expanded comparison. This sacrifices exact covariate mean balance
+for stability and changes the estimated overlap target. Results must not be
+presented as the same estimand as the old unpenalized overlap analysis.
+
+Fair comparison using that same regularized method:
+                                      Nine controls       21 controls
+Worst overall SMD across all 21 X           .983                .223
+Full effective R / D counts                58.2 / 41.0        37.8 / 31.8
+Evaluation effective R / D counts          24.1 / 23.9        16.8 / 19.8
+Evaluation effective states                  7.62                6.35
+Evaluation areas                            101                 101
+
+Balance improves, but the .10-SD standard is not reached even overall. Retaining
+all rows is not the same as retaining their statistical information. The
+expanded forest's rank-half subgroup audit has minimum party/group ESS of
+4.80 (clean power), 4.57 (manufacturing), and 3.79 (capacity). Residual covariate
+and state differences remain. No candidate meets all prespecified subgroup
+balance, effective-sample and concentration requirements. Do not promote
+subgroup or state-level causal effect claims from these fits.
+
+OUT-OF-SAMPLE PREDICTION
+
+Unweighted evaluation outcome-change MSE:
+Outcome                         Nine controls       21 controls       Change
+Clean-power announcements          10.574              14.502          +37.1%
+Manufacturing announcements          .1671               .1906         +14.0%
+Net wind/solar MW                16874.879           17060.496          +1.1%
+
+It worsens for all three outcomes. A manufacturing overlap-weighted MSE falls
+from .1514 to .1371, but the overlap population itself changes. That is not a
+common-target validation improvement. Good outcome prediction would not, by
+itself, validate treatment-effect heterogeneity in any case.
+
+AVERAGE EXPANDED-MODEL CONTRASTS
+
+Heldout augmented-score overlap-targeted difference-in-changes estimates,
+with 95% intervals from 999 evaluation-state bootstrap draws and t(9) critical
+values, conditional on the trained ranking and outcome models:
+
+Clean-power announcements/year/core     -.524    [-1.942,  .894]  p=.425
+Manufacturing announcements/year/core    .080    [ -.074,  .235]  p=.270
+Annual net wind/solar capacity MW       13.797   [-26.302,53.896]  p=.456
+
+These are conditional-model estimates with material overlap limitations, not
+new headline causal effects. None differs significantly from zero, and none
+establishes a zero or economically negligible effect.
+
+FOREST HETEROGENEITY VALIDATION
+
+QINI is an effect-ranking statistic, NOT an average policy effect. Positive
+values indicate better correspondence between predicted and adjusted effects.
+All three outcomes and both rankings are reported; Holm correction covers
+the six prespecified primary ranking tests.
+
+Relearned expanded forest, expanded adjustment:
+Outcome               QINI         Pointwise 95% CI          Raw p    Holm p
+Clean power            .087       [-.454, .628]               .724     1.000
+Manufacturing          .054       [ .007, .101]               .030      .177
+Net capacity          1.263       [-8.642,11.168]              .780     1.000
+
+The manufacturing ranking is an exploratory signal worth documenting, but it
+does not survive the prespecified correction and its subgroups lack the
+required balance/support. It is not a confirmed causal heterogeneity result.
+
+Holding the old ranking fixed while adding adjustment gives raw QINI p-values
+.814, .322 and .294, respectively. No old-ranking result is validated either.
+Placebo and trend-adjusted results are saved, not used to select a specification.
+
+PRE-TRENDS
+
+Full 196-area weighted pretrend comparisons (2019, 2020 and 2021 relative to
+2022), with 999 full-state bootstrap propensity refits:
+                            Nine controls p       21 controls p
+Clean-power announcements        .627                  .339
+Manufacturing                    .193                  .128
+Net wind/solar MW                .646                  .453
+
+None rejects the joint zero pretrend restrictions. These tests have limited
+power, and 2022 itself overlaps the beginning of the IRA. Nonrejection is not
+proof of parallel counterfactual trends or absence of concurrent IRA shocks.
+The expanded tests do not provide stronger affirmative identification evidence.
+
+INTERPRETATION FOR THE PAPER
+
+We can defend a richer, transparent econometrics-plus-ML analysis of whether
+political effects vary, and report that this sample does not robustly validate
+such heterogeneity. We cannot defend confirmed political subgroup effects,
+"no effect," or claims that split-importance rankings identify causal drivers
+of investment. Covariates can predict investment and effect variation without
+their own effects being causally identified.
+
+The remaining bottleneck is comparable Republican/Democratic areas and
+independent political variation, not merely adding more control columns.
+Stronger evidence would require additional defensible turnover cohorts or
+another credible source of political variation, more independent states/events,
+and better historical grid-capacity/eligibility measures. Any simpler covariate
+representation or revised forest should be specified before further evaluation,
+not selected because it yields a smaller p-value on these same states.
+
+REPLICATION AND FILES
+
+From repository root, using clean-investment-causal:
+conda run -n clean-investment-causal python republican_takeover_analysis/pretreatment_data/replicate.py --out /private/tmp/takeover-new-data-rebuild
+
+The output directory must not already exist. Frozen raw downloads are reused;
+--download fetches any missing sources. Generated covariate audit files in this
+separate analysis directory are rebuilt; legacy files and manuscripts are not
+edited. The R package library defaults to /private/tmp/clean-grf-r46 and can be
+set with TAKEOVER_R_LIB. Required R package: grf; Python environment includes
+geopandas, pandas, numpy, scipy, statsmodels, matplotlib, requests and openpyxl
+(the latter is used only to read official source spreadsheets).
+
+comparison.csv: all primary, placebo and trend-adjusted estimates.
+support_comparison.csv, subgroup_comparison.csv: effective samples and balance.
+prediction_metrics.csv: evaluation errors on common observations.
+pretrend_estimates.csv, pretrend_joint_tests.csv: full-panel diagnostics.
+expanded/{old,expanded}/: every subgroup weighting candidate, not only examples.
+raw/ and download_manifest.json: frozen downloaded data and exact source URLs.
+covariates.csv and *_audit.csv: constructed controls and coverage checks.
+results_current/ and replication/: independently rerun results.
+verification.json: source hashes, independent score/interval checks and rerun
+comparison. A fresh output-directory rerun reproduces all 44 result CSV tables
+within 1e-9; 230 source, numerical and replication checks pass. No manuscript,
+figure or legacy result was changed.

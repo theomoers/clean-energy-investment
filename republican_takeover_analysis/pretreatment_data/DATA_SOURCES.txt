@@ -1,0 +1,108 @@
+ADDITIONAL PRE-TREATMENT DATA
+
+All 98 downloaded source responses (approximately 383 MB) are preserved under
+raw/. Exact request URLs, reference periods, retrieval times, sizes and SHA256
+hashes are in download_manifest.json. No account or API key is required to
+replicate the frozen downloads. The live Census API returned a missing-key
+page, so official Census bulk files were used instead of an unofficial mirror.
+
+SOCIOECONOMIC CONDITIONS
+Source: Census ACS 2017-2021 five-year estimates, released December 8, 2022.
+https://www.census.gov/newsroom/press-kits/2022/acs-5-year.html
+https://www2.census.gov/programs-surveys/acs/summary_file/2021/table-based-SF/data/5YRData/
+Tables: B01003 (population), B17001 (poverty), B15003 (education), B23025
+(civilian labor force/unemployment), B19025 (aggregate household income) and
+B11001 (households). Five controls: log population density, poverty rate,
+unemployment rate, college share among adults 25+, and log mean household
+income in 2021 dollars. B15003 cells 22-25 define bachelor's degree or higher.
+
+Allocate additive tract counts by area fraction inside each fixed geographic
+core, then form ratios. These are approximate spatially interpolated estimates,
+not official estimates for these custom cores. Tract-area coverage is at least
+99.91% in every core. Counts other than aggregate income cover the entire
+observed population. For aggregate income, use only households in tracts with
+reported income totals. Population coverage for those totals is at least 94.24%
+(CA-22); coverage is recorded per variable in acs_core_audit.csv. Do not treat
+missing Census sentinels as zero or average tract medians. ACS sampling error
+and spatial-interpolation error are not propagated into effect intervals.
+
+RENEWABLE RESOURCES
+NASA POWER monthly regional API, 2010-2021 (88 raw grid responses).
+https://power.larc.nasa.gov/docs/services/api/temporal/monthly/
+ALLSKY_SFC_SW_DWN: surface solar radiation, kWh/m2/day, 1-degree cells.
+WS50M: 50-meter wind speed, m/s, 0.625-degree longitude x 0.5-degree latitude.
+Weight daily-average monthly values by calendar days and intersect native cells
+with fixed cores in equal-area coordinates. Duplicate tile-edge cells are
+deduplicated and their values checked. Every core has complete grid coverage.
+These are coarse physical-resource proxies from retrospective NASA products.
+They are not engineering-grade site assessments, turbine-height wind output,
+or data files frozen at their historical publication dates. Only observations
+ending in 2021 enter the measures.
+
+GRID PROXIMITY (NOT SPARE INTERCONNECTION CAPACITY)
+Official EIA-860 2021 annual archive:
+https://www.eia.gov/electricity/data/eia860/
+https://www.eia.gov/electricity/data/eia860/archive/xls/eia8602021.zip
+Use plants with 2021 operable generators (OP, SB, OS, OA), operating year <=2021,
+valid contiguous-US coordinates, and at least one reported grid voltage >=115kV.
+There are 11,284 operable plants in the source; 454 lack a usable reported
+voltage, and 3,545 qualifying high-voltage connection points enter the proxy.
+Grid_node_audit.csv records inclusion and missingness for every source plant.
+
+Compute area-weighted distance to the nearest point and fraction of core area
+within 25km, using 133,471 polygon-clipped five-km quadrature cells in EPSG5070.
+New controls are log(1+mean distance in km) and area fraction within 25km.
+Connection points outside a core can serve it. Distances are not restricted
+to points inside a district or state. The grid file is a historical annual
+archive downloaded today; later archival revisions cannot be ruled out.
+This does NOT measure all transmission lines/substations, hosting capacity,
+available queue capacity, congestion, or an interconnection offer. A verified
+historical nationwide measure of those quantities remains missing.
+
+IRA EXPOSURE PROXIES, NOT REALIZED SUBSIDIES
+Treasury historical lists:
+https://home.treasury.gov/policy-issues/tax-policy/data-transparency/all-treasury-generated-energy-communities-data-sets
+https://home.treasury.gov/system/files/131/EC_CC_V1.xlsx
+https://home.treasury.gov/system/files/131/EC_MSA_FFE_V1.xlsx
+
+Coal exposure: share of core area in tracts containing a documented mine
+closure (since 2000) or coal-unit retirement (since 2010), dated before 2022,
+or directly adjoining such tracts. Restrict directly affected tracts to the
+first Treasury list and separately dated closures in the existing MSHA/EIA
+audit. Adjacency includes corner contacts as specified by IRS, using the
+existing 2020 tract map. There are 3,945 exposure tracts nationally. Closure
+dates and locations are retrospectively reconstructed. No post-2021 closure
+enters. This is not a full official historical eligibility determination.
+
+Fossil-employment exposure: core-area share in statistical areas appearing
+in the first FFE list, based on employment through 2020. This captures only
+the fossil-employment limb, NOT the annual unemployment requirement. Lists
+were published in 2023; the underlying employment facts precede the takeover
+and IRA. We use them as reconstructed predetermined conditions, not as
+designations investors could already observe in 2021.
+
+Industrial exposure: log(1+2020 establishments per 1,000km2) in NAICS 335911,
+335912 (batteries) and 334413 (semiconductors, including solar cells).
+https://www.census.gov/data/datasets/2020/econ/cbp/2020-cbp.html
+https://www2.census.gov/programs-surveys/cbp/datasets/2020/cbp20co.zip
+Use establishments rather than suppressed employment. County establishment
+densities are interpolated into cores by area. These broad industries are
+related to some 45X products but are NOT an exact eligibility crosswalk.
+Semiconductors include non-solar products, and many other eligible components
+are not captured. This is an industrial-footprint confounding control only.
+
+Rules applicable to study period, not subsequent legislative amendments:
+https://www.irs.gov/irb/2023-29_IRB
+https://www.irs.gov/irb/2024-51_IRB
+Energy-community bonuses concern power credits; Section 45X is a distinct
+manufacturing production credit. We do not assign the former bonus to 45X.
+Brownfields, realized credits, 48C awards, post-2023 unemployment and new
+post-takeover manufacturing facilities are not used as controls.
+
+REUSED INPUTS
+Exact old sample, outcomes and split: overlap_forest/results_current/areas.csv.
+Historical boundary maps and NC117 correction: revision_analysis/panel.py.
+2020 tracts and dated MSHA/EIA closures: energy_community_audit/inputs/tracts.zip
+and energy_community_audit/results/dated_closures.csv. Existing raw sources and
+all legacy scripts/results are preserved. Every custom-core area is reconciled
+to the original analysis before any new covariate join.

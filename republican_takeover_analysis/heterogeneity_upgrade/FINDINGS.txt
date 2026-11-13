@@ -1,0 +1,226 @@
+HETEROGENEITY ESTIMATOR AND BALANCE UPGRADE
+2026-11-07
+
+BOTTOM LINE
+
+Yes, measured subgroup covariate balance can improve substantially without
+dropping evaluation areas. But the weighting changes do not achieve the full
+prespecified balance/support standard, and the improved adjusted-score tests
+still do not establish reliable political-effect heterogeneity.
+
+This is more informative than the previous raw high-minus-low comparison:
+we now evaluate the fixed forest ranking with augmented, covariate-adjusted
+investment-change scores, use a continuous ranking test, and summarize effect
+modification in a state-adjusted projection. The old raw subgroup audit was
+not itself a definitive test of a properly adjusted conditional forest.
+
+The forest remains a genuine exploratory ML component. The evidence does not
+support declaring causal heterogeneity, zero effects, or homogeneous effects.
+
+WHAT CHANGED
+
+- Retained the exact original eligible panel: 196 areas in 25 states.
+- Preserved the original honest, training-only forest ranking; no new search
+  over trees, modifiers, seeds or outcome significance.
+- Preserved the state-disjoint split: 95 training areas in 15 states; all 101
+  evaluation areas in ten different states. All continuous tests use those
+  101 evaluation areas, rather than selecting a small high-effect group.
+- Fitted separate Republican/Democratic ridge outcome-change models with nine
+  baseline covariates and partially pooled training-state effects. All fitting
+  and leave-one-training-state-out tuning use only the 95 training observations.
+- An unseen evaluation state's intercept is not learned: its deviation is
+  set to zero. This is a material modeling limitation, not hidden knowledge.
+- Constructed AIPW-type conditional difference-in-changes scores, tilted toward
+  the overlap population. Used bounded score algebra to avoid numerical
+  inverse-propensity explosions.
+- Refitted propensities in 999 evaluation-state bootstrap draws, holding the
+  independent training data, outcome models and ranking fixed.
+- Evaluated the continuous ranking by the exact weighted QINI integral;
+  positive QINI would mean that higher predicted effects correspond to higher
+  adjusted effects. QINI is a ranking statistic, not an average policy effect.
+- Estimated a secondary state-adjusted projection of adjusted effects onto
+  standardized log geographic area and log prior clean capacity.
+- Audited pooled subgroup-aware propensity models and capped calibration
+  weights, with design selection based on X/party/frozen scores only.
+
+BALANCE GAINS WITHOUT HARD DROPS
+
+The outcome-free rank-half definition uses the weighted median of independent
+evaluation priorities. It does not use evaluation investment outcomes.
+It changes the group definition/target rather than changing the forest ranking.
+
+Group sizes (low/high):
+                     Original training cutoff     Evaluation rank halves
+Clean power                  84 / 17                       57 / 44
+Manufacturing                25 / 76                       47 / 54
+Net capacity                 39 / 62                       43 / 58
+
+Illustrative strongest measured-covariate balance candidates from the frozen
+penalty grid (pooled interaction ridge penalty .001):
+
+Outcome / definition       Max covariate SMD   Max state SMD   Min cell ESS
+Clean power / rank halves          .098              .680           7.12
+Manufacturing / rank halves        .071              .514           5.11
+Capacity / original cutoff         .090              .277           6.12
+
+Each retains all 101 evaluation observations with positive weights. The table
+is a design diagnostic, not a selection of significant outcome estimates.
+The earlier worst measured covariate SMDs were 1.18, 1.13 and .46, respectively.
+Clean power's smallest effective subgroup/party sample was previously 3.67.
+
+However:
+- State composition remains imbalanced.
+- A single observation can receive about 30% of a party/group's normalized
+  weight in the clean-power and manufacturing examples.
+- Some state/group cells have only one observed party. Shrinkage borrows
+  information; it does not generate actual comparison observations.
+- Keeping every row is not the same as retaining its full statistical weight.
+
+CAP/ESS-CONSTRAINED CALIBRATION
+
+Reported all 42 prespecified design candidates: two definitions x three
+outcomes x four pooled-propensity penalties/three calibration tolerances.
+No outcome-based selection occurred.
+
+Calibration jointly targets nine covariates and state indicators within groups,
+keeps a positive weight floor, and caps weights so Kish ESS is at least five
+or one-third of the cell count. Unlike the previous repair, it does not require
+the same states to contribute both parties to both high/low groups.
+
+The strict .10-SD target is infeasible for all six outcome/group-definition
+cases UNDER THESE CAPS AND POSITIVE-WEIGHT CONSTRAINTS. This is not a proof
+that no conceivable weighting scheme exists.
+
+Relaxed .20-SD balance is feasible for capacity (minimum cell ESS about nine).
+Relaxed .30-SD balance is feasible for clean-power rank halves and both
+manufacturing definitions. These are weaker design standards and are reported
+as sensitivity diagnostics, not substituted for the prespecified primary rule.
+
+No candidate meets every primary requirement (including state balance, weight
+concentration and support). Therefore no subgroup-aware design is promoted
+to a new causal group-effect estimate.
+
+Balance thresholds are diagnostics, not causal theorems. Failing raw balance
+does not by itself invalidate a correctly specified adjusted-score estimator;
+conversely, passing mean balance would not establish absence of confounding.
+
+ADJUSTED CONTINUOUS RANKING TEST
+
+Outcome                    QINI      95% interval       Raw p    Holm p
+Clean-power announcements   .099     [-.190,  .388]       .459     .598
+Manufacturing announcements .037     [-.020,  .094]       .174     .523
+Net wind/solar MW          -8.754     [-26.723, 9.214]     .299     .598
+
+None validates the forest's effect ranking. A negative capacity point estimate
+does not establish a reliably reversed ranking either.
+
+The native GRF discrete-grid QINI diagnostic gives closely comparable points:
+.101, .037 and -8.877. Its standard errors hold the estimated scores and tilts
+fixed and are supplementary; primary inference refits the propensities.
+
+Placebo, trend-adjusted and zero-outcome-model/IPW versions are saved alongside
+the primary results. None provides a significant corrected heterogeneity
+finding. In particular, the manufacturing trend-adjusted raw p=.090 is not
+promoted as a result.
+
+STATE-ADJUSTED MODIFIER PROJECTION
+
+Joint test of log area and log prior clean capacity as effect modifiers:
+clean-power p=.119 (Holm .356);
+manufacturing p=.499 (Holm .676);
+capacity p=.338 (Holm .676).
+
+No individual modifier coefficient survives the six-coefficient correction.
+These coefficients concern association with the political effect, not causal
+effects of area/capacity on investment, and differ from ordinary outcome-
+regression control coefficients.
+
+ADJUSTED HELD-OUT AVERAGES AND GROUP CONTRASTS
+
+The adjusted average changes in the 101-area evaluation population are:
+clean -.588 [-1.876, .700];
+manufacturing .030 [-.180, .240];
+capacity 17.71 MW [-24.88, 60.30].
+These are not replacements for the earlier full-196-area headline averages:
+the evaluation population and adjustment procedure differ.
+
+Adjusted original high-minus-low changes are:
+clean .682 [-2.908, 4.271];
+manufacturing .109 [-.200, .417];
+capacity -39.72 MW [-145.23, 65.79].
+All are imprecise and nonsignificant.
+
+IDENTIFICATION AND UNCERTAINTY LIMITATIONS
+
+The estimand remains a Republican-minus-Democratic relative response to the
+House majority transition. Both parties change alignment status. It is not
+an IRA/45X credit effect, nor gaining alignment versus an unaffected group.
+
+Augmented scores do not establish conditional parallel trends or eliminate
+unobserved confounding. The overlap target depends on estimated propensities;
+do not describe the entire overlap-targeted procedure as automatically doubly
+robust or fully orthogonal. In-sample state-adjusted propensity fitting is
+not a fully cluster-cross-fitted nuisance scheme. Bootstrap inference is
+conditional on the independent training sample/models/ranking.
+
+Only ten states contribute independent evaluation clusters. Pre-period
+outcomes also enter design. Nonsignificant placebo/ranking tests are not
+equivalence tests or evidence of no economically meaningful differences.
+
+All upgrades are exploratory because previous results and this dataset were
+already inspected. Fresh computational reproduction is not external empirical
+replication or a new exogenous political shock.
+
+RECOMMENDATION
+
+Retain the upgraded adjusted-score evaluation: it is better aligned with
+testing conditional heterogeneity than the earlier raw subgroup differences.
+Use the balancing frontier to document which improvements are possible
+without hard drops. Do not claim that the remaining state/support problem
+has been resolved or that political heterogeneity has been detected.
+
+Before making a stronger causal claim, the most useful next inputs are
+geography-consistent pre-treatment resource/grid/industrial/socioeconomic
+measures and predetermined exposure to IRA incentives, plus additional
+independent political variation where comparable trends are defensible.
+Further significance-driven estimator searches would not supply that evidence.
+
+REPLICATION
+
+From repository root, in clean-investment-causal:
+conda run -n clean-investment-causal python republican_takeover_analysis/heterogeneity_upgrade/run.py --out republican_takeover_analysis/heterogeneity_upgrade/new_run --bootstrap-reps 999
+
+Output directory must not already exist. Uses /usr/local/bin/Rscript and the
+existing GRF library under /private/tmp/clean-grf-r46; TAKEOVER_R_LIB can override.
+
+Canonical outputs: results_current/
+Independent fresh rebuild: replication/
+Reproduction/independent-check record: REPLICATION.json
+Earlier implementation runs: development_archive/
+
+All 21 files agree byte-for-byte between the canonical run and fresh rebuild.
+112 checks passed, including exact original ranking reproduction, input hashes,
+calibration feasibility/weight constraints, bootstrap standard errors,
+independent WLS, and QINI numerical integration. Perturbing evaluation outcomes
+by one million leaves nuisance predictions and training CV unchanged.
+Both figures were visually reviewed.
+
+No manuscript, prior analysis, frozen source data or existing figure was edited.
+
+KEY OUTPUTS
+adjusted_heterogeneity.csv: averages, QINI, adjusted group gaps and projections.
+joint_modifier_tests.csv: joint modifier tests and correction.
+design_frontier.csv: all candidates, feasibility, ESS/balance/support.
+subgroup_balance.csv, subgroup_support.csv, subgroup_weights.csv: full audit.
+group_definitions.csv: original and outcome-free rank-half membership.
+selected_designs.csv: no design passes the full primary rule.
+evaluation_scores.csv: held-out priorities and augmented scores.
+nuisance_training_cv.csv, nuisance_models.csv, outcome_predictions.csv:
+independent outcome-model fitting and predictions.
+native_rate_diagnostic.csv: supplementary native GRF ranking diagnostic.
+adjusted_ranking.png, balance_frontier.png: figures.
+
+METHOD SOURCES
+https://grf-labs.github.io/grf/reference/rank_average_treatment_effect.fit.html
+https://grf-labs.github.io/grf/reference/best_linear_projection.html
+https://arxiv.org/abs/2010.02121

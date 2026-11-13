@@ -1,0 +1,53 @@
+Additional pre-treatment controls, frozen 2026-11-07 before expanded-model results
+
+Retain the existing 196 fixed district cores, treatment, outcomes and 95/101
+training/evaluation state split. Do not rewrite any manuscript or legacy result.
+New measurements end in 2021 wherever possible, before both the IRA and takeover.
+
+Sources and features, chosen without new outcome estimates:
+1. ACS 2017-2021 tract counts: population density, poverty, unemployment,
+   college attainment and mean household income. Allocate additive counts by
+   tract/core overlap area, then form rates. This is areal interpolation, not
+   an exact census of residents inside a core. Never average tract medians.
+2. NASA POWER 2010-2021 regional solar radiation and 50m wind speed, averaged
+   over months and area-weighted over native cells intersecting each core.
+   Retrospective physical-resource measures, not historical data-release files.
+3. EIA-860 2021 operating-plant interconnection voltages: area-weighted distance
+   to a >=115kV plant connection and fraction within 25km. These measure
+   proximity to reported plant connection points, NOT spare grid capacity,
+   queues, or all substations/transmission lines. Missing voltages are audited.
+4. IRA exposure proxies: share of area in coal-closure tracts or adjoining
+   tracts with documented pre-2022 closures; share in fossil-employment
+   statistical areas based on pre-2021 employment; density of 2020 battery/
+   semiconductor establishments. These are predetermined physical/industrial
+   exposure proxies, not realized subsidies or exact 45X eligibility. Later
+   Treasury lists may be used to reconstruct historical facts, not as
+   contemporaneously observed 2021 designations. No 2023+ unemployment,
+   realized credit claims, awards or post-treatment projects enter controls.
+
+Compare the old nine-control model with one expanded, prespecified model.
+Report full-sample overlap balance and ESS, heldout subgroup balance/support,
+training-state CV and heldout outcome prediction, pre-period placebo, and
+heldout continuous forest-ranking QINI with state-level inference.
+Also evaluate the frozen old ranking with expanded adjustment to distinguish
+adjustment from relearning. All three outcomes are retained. Holm-adjust all
+six primary ranking tests (two rankings x three outcomes); no search for a
+significant outcome, state, bandwidth, covariate subset or forest seed.
+
+Forests use the existing GRF settings and fixed train/test states. All old and
+new features can modify effects in the expanded forest. Outcome regressions
+are fitted only on training states with arm-specific ridge and training-state
+CV. Propensity uses state plus controls without outcomes. Exact unpenalized
+overlap weighting is attempted; separation/concentration is reported, not
+concealed by dropping observations. Report any necessary regularization
+separately. Outcome-free numerical rule: if either the full or training
+unpenalized fit has any propensity outside [.01,.99] or a per-observation
+gradient above 1e-6, use a fixed .01 mean-log-likelihood ridge penalty on
+covariates (not state intercepts) in BOTH fits and in bootstrap refits.
+This trades exact mean balance for stability and is a changed overlap target.
+The same rule is evaluated in the baseline comparison; legacy estimates remain.
+Inference holds trained forest and outcome nuisance fixed and
+refits propensity in evaluation-state bootstrap draws. Only ten evaluation
+states remain: additional covariates do not create independent variation.
+Conditional parallel trends, no differential concurrent shocks and overlap
+remain identifying assumptions. Better balance is not proof of causality.

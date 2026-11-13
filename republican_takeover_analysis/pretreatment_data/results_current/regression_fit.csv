@@ -1,0 +1,7 @@
+model,outcome,n,states,parameters,residual_df,adjusted_r2
+baseline,clean_announcements,196,25,35,161.0,0.34330105568464886
+baseline,manufacturing_announcements,196,25,35,161.0,0.08258704421802676
+baseline,wind_solar_net_mw,196,25,35,161.0,0.038996498611778896
+expanded,clean_announcements,196,25,47,149.0,0.33533532655472864
+expanded,manufacturing_announcements,196,25,47,149.0,0.09626986351275235
+expanded,wind_solar_net_mw,196,25,47,149.0,0.03794093686463573

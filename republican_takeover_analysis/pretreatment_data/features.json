@@ -1,0 +1,14 @@
+[
+  "log_population_density",
+  "poverty_share",
+  "unemployment_share",
+  "college_share",
+  "log_mean_household_income",
+  "solar_kwh_m2_day",
+  "wind50m_ms",
+  "log_distance_hv_node",
+  "area_within25km_hv_node",
+  "ira_coal_area_share",
+  "ira_ffe_area_share",
+  "log_component_related_density"
+]

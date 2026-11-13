@@ -1,0 +1,78 @@
+Extension protocol, fixed before estimating these extensions (2026-11-06)
+
+Purpose: more informative inference, not selection of significant specifications.
+The existing results have already been inspected. All extensions are exploratory.
+Preserve original results and the manuscript. Use clean-investment-causal + R/GRF.
+
+1. Equivalence: two one-sided t tests at alpha .05, state-cluster df G-1;
+   report 90% and 95% intervals, and minimal symmetric bound for equivalence.
+   That minimal bound is descriptive, NOT a substantively justified threshold.
+   Relative sensitivity bounds: 10%, 25%, 50% of pooled PRE-period annual baseline.
+   Absolute grids: clean announcements .1,.2,.5,1; manufacturing .025,.05,.1,.2;
+   net capacity 5,10,25,50 MW per area-year. No threshold agreed by user yet.
+   Significance and equivalence are separate questions; report both. Primary
+   families have three outcomes, Holm adjusted, separately for each grid position
+   (the absolute bounds have different units across outcomes).
+   Power: t/noncentral-t 80% MDE plus fixed-standard-error normal-approximation
+   equivalence power under true zero. Use observed SE for design planning, never
+   'observed power' at the observed effect. Scaling scenarios are hypothetical
+   independent replication equivalents, NOT promises from adding project rows.
+
+2. Balance: retain original 196 mixed-state eligible areas. Existing five
+   matching features plus pre-2022 manufacturing level/slope and net-capacity
+   level/slope (2019-21). No 2022+ outcomes enter design. Within-state maximum
+   cardinality matching with aggregate absolute standardized mean differences
+   <= .10, original five-variable RMS-distance caliper <=1.5, and no reuse.
+   Secondary stage minimizes distance at fixed maximal cardinality. Report
+   feasibility/optimality, all balance measures and attrition. Preserve old pairs.
+   Also estimate overlap-weighted DiD, logistic state effects plus the same nine
+   covariates, checking exact mean balance, overlap and effective sample size.
+   Refit weights in state bootstrap. No automatic causal claim from balance.
+
+3. Forest: reuse honest state-clustered paired-DiD forest on balanced pairs,
+   fixed hyperparameters/seeds and state-disjoint learning/evaluation. No tuning
+   on significance. Pair types, not individual causal effects. Fewer than 25
+   pairs / eight training states / eight test pairs => no forced validation.
+
+4. Exploratory categories: solar, wind, storage announcements; battery, solar,
+   other manufacturing announcements (mutually exclusive). Use same sample and
+   design for all, including zeros. Holm correction across six categories.
+   State-level pair contrasts are descriptive only: insufficient independent
+   state clusters within a state. Show pairs, events and estimates; do not attach
+   naive project-level p-values. Forest held-out heterogeneity remains primary
+   exploratory heterogeneity check. Report subgroup differences rather than
+   interpreting significance in one group and not another as a difference.
+
+5. 2011 feasibility: Census 112th map, valid 2007-2012 per Census; dated House
+   terms, same member and party across Dec15 2010 / Jan15 2011. Include all seats
+   before joining outcomes. Main pre 2007-10, post 2011-12; same-party continuous
+   service sensitivity. Fixed geography, at-large seats, coordinate/state/duplicate
+   spatial audits. RHG wind+solar net annual MW only (not CIM manufacturing).
+   Save support, party changes, annual panel, event study, joint pre-trends,
+   linear-trend-adjusted estimate and individual pretrend contrasts. Audit
+   baseline/pre-outcome overlap and forest support; retain forests on adequate
+   matched samples, but do not interpret as causal if identifying checks fail.
+
+6. Verify counts, political labels, no duplicate project assignment, balance
+   constraints, equivalence identities, independent paired SE calculation, state
+   disjoint forest validation and fresh deterministic rerun. Save input hashes,
+   source URLs, outputs, findings and one-command replication entry point.
+
+Implementation clarifications, not specification selection:
+- User clarified that statistical nonsignificance, not a particular equivalence
+  threshold, was their intended criterion. All equivalence bounds remain
+  explicitly illustrative. Nonsignificance is not labeled evidence of no effect.
+- Historical terms sometimes begin Jan4/5 rather than Jan3. The continuous-member
+  sensitivity permits only <=7-day gaps during odd-year January Congress openings,
+  with the same member/party. These gaps are counted in the political roster.
+- Noncentral-t power is evaluated by 128-point gamma quadrature of its
+  normal/chi-square mixture because the installed SciPy nct CDF returned NaN for
+  finite noncentralities. Central null power is checked against .05.
+
+Sources:
+https://www.census.gov/geographies/reference-maps/2005/geo/109th-112th-congressional-district-maps.html
+https://www2.census.gov/geo/tiger/TIGER2011/CD/tl_2011_us_cd112.zip
+https://www2.stat.duke.edu/~fl35/papers/psweight_final.pdf
+https://search.r-project.org/CRAN/refmans/designmatch/html/cardmatch.html
+https://aaroncaldwell.us/TOSTERpkg/articles/hypothesis_testing.html
+https://grf-labs.github.io/grf/REFERENCE.html

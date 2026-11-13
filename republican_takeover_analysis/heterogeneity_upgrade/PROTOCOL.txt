@@ -1,0 +1,98 @@
+Exploratory estimator/validation upgrade, frozen 2026-11-07.
+Earlier outcomes and forest rankings have already been inspected. This is not
+a preregistered or independent replication study. Preserve every earlier
+analysis and manuscript. Do not choose specifications by statistical significance.
+
+DATA AND RANKING
+Use the existing 196 eligible areas and the SAME fixed state split: 95 training
+areas / 15 states; 101 evaluation areas / 10 different states. Reproduce the
+earlier training-only honest GRF ranking exactly, without tuning. Record training
+OOB scores as well as held-out priorities. Ranking and nuisance-outcome fitting
+must never use evaluation outcomes. Repeated splitting/cross-fitting of rankings
+is not introduced here: naive pooled cross-fit RATE inference is not valid.
+
+OUTCOME ADJUSTMENT
+For each outcome (clean announcements, manufacturing announcements, net MW)
+and version (main delta, 2022-minus-2021 placebo, trend-adjusted delta), estimate
+separate Republican/Democratic conditional-change regressions using ONLY the
+95 training observations. Ridge models include nine standardized pre-2022
+covariates and training-state indicators, with an unpenalized intercept.
+Choose ridge alpha in {.1,1,10,100} by leave-one-training-state-out prediction
+MSE, separately by arm/outcome/version. No evaluation Y enters tuning.
+An unseen evaluation state's intercept cannot be estimated; its deviation is
+set to zero. Correct state-adjusted propensities are therefore particularly
+important. Also report zero-outcome-model/IPW sensitivity.
+
+ADJUSTED SCORES AND TARGET
+Use the previously specified logistic state + nine-covariate propensity e,
+estimated from X and party only. Reproduce its original values.
+Gamma = m1-m0 + T/e*(DeltaY-m1) - (1-T)/(1-e)*(DeltaY-m0).
+Compute h*Gamma in bounded form, h=e(1-e), avoiding numerical inverse-weight
+explosion. This is an AIPW-type conditional difference-in-changes score.
+It is not automatically an ATT against an untreated group: Democrats also lose
+majority alignment. Causal interpretation still requires conditional parallel
+trends and no differential contemporaneous shocks.
+Because the overlap target depends on the estimated propensity, do NOT claim
+the whole overlap estimand is doubly robust/orthogonal without qualification.
+Refit e in inference to incorporate target/weight estimation. The trained
+outcome models and ranking are held fixed for honest evaluation inference.
+
+CONTINUOUS VALIDATION
+Primary ranking metric: exact weighted QINI integral int_0^1 q*TOC(q)dq, using
+fractional inclusion at weighted rank boundaries and averaged ties. Equivalent
+to overlap-weighted covariance of Gamma with ascending weighted midrank.
+Positive means the frozen ranking puts larger conditional-change effects higher.
+Use two-sided state-bootstrap t(9) inference, Holm across three outcomes.
+Also report the overlap-weighted adjusted average, and the original frozen
+high-minus-low contrast using Gamma scores rather than raw changes.
+Secondary summary: overlap-weighted projection of Gamma onto standardized log
+geographic area and log prior clean capacity, with evaluation-state fixed
+effects. Test both modifier slopes jointly; Holm across three joint tests and
+separately across six individual slopes. Coefficients are effect associations,
+not causal effects of the modifiers.
+Use 999 evaluation-state bootstrap draws, training frequencies held at one,
+evaluation states resampled with multiplicity. Refit full-design propensity
+each draw, recompute tilts, scores, weighted ranks, means and projections.
+Require >=95% numerical success for intervals. Report placebo/trend/IPW
+sensitivities together, without selecting a favorable variant.
+
+GROUP-AWARE DESIGN AUDIT (NO OUTCOME-BASED SELECTION)
+Two frozen definitions for each outcome: original training cutoff, and an
+evaluation overlap-weighted median of independent priorities (X/scores only).
+The latter changes the group definition/estimand, not the learned ranking.
+No hard area exclusions and no demand for identical states across both groups.
+
+1. Pooled penalized propensity models on all 101 evaluation areas:
+   state indicators + nine standardized X + group main effect + group*X and
+   group*state interactions. State/group main effects unpenalized; main X ridge
+   penalty .001 (average log-likelihood scale); interaction penalties
+   {.001,.01,.1,1}. These models partially pool groups; exact subgroup balance
+   is not promised. Use arm-specific overlap weights, report every candidate.
+
+2. Convex calibration audit:
+   Normalize each party/group cell to mass one. Minimize sum of squared weights,
+   subject to all nine covariates AND state-indicator within-group SMDs <=
+   {.10,.20,.30}; primary target .10. Per-area positive lower bound .01/n_cell;
+   upper bound min(3/n_cell,.20), enforcing Kish ESS >=max(5,n_cell/3).
+   Solve linear feasibility first, then the quadratic objective. Report
+   infeasibility rather than relaxing constraints after seeing outcomes.
+   This defines a calibrated common-support group target, not the original ATO.
+
+For every candidate: report nonzero areas, group/party ESS, max normalized
+weight, covariate/state SMDs and weight mass in state/group cells with only one
+observed party. Such cells cannot acquire real controls through regularization.
+Candidate support rule: >=5 Kish ESS and >=3 contributing states per arm/group.
+Candidate design rule: max SMD<=.10, max normalized weight<=.25 and <=10% mass
+in one-party state/group cells. These are audit thresholds, not causal guarantees.
+Choose at most one primary candidate per outcome/group-definition by largest
+minimum-cell ESS among candidates meeting ALL rules; tie-break max SMD then
+fixed candidate order. If none pass, report that no subgroup-aware design passed.
+Only passing candidates receive subsequent effect inference; all others remain
+design diagnostics, so outcome significance cannot drive weight selection.
+
+VERIFY
+Reproduce rankings; verify bounded score algebra and QINI against numerical
+integration; compare native GRF RATE-style diagnostic as a secondary check;
+independently verify projections and design constraints. Hash frozen inputs and
+code. Rebuild into a fresh output directory and compare generated files.
+Deliver results, limitations, plots and replication command. No manuscript edit.

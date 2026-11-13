@@ -1,0 +1,78 @@
+Overlap-targeted 2023 change forest: exploratory extension, 2026-11-06
+
+Earlier matching and overlap-average results have been inspected. This is not
+preregistered. Freeze this specification before estimating new forest rankings.
+Do not edit manuscripts, legacy outputs or extension/results_current.
+
+Population: all 196 eligible fixed areas in 25 mixed-party states, including
+zero-project areas. Same dated political assignment and 2019-22/2023-24 changes.
+Outcomes: clean-power announcements, manufacturing announcements, net wind/solar
+MW. Also report 2022-minus-2021 placebo, trend adjustment and exclusion of 2022.
+No new covariates invented for geographic cores.
+
+Propensity: same unpenalized logistic state indicators + nine pre-2022 design
+covariates. Full-sample weights must reproduce prior weights and effects.
+Full and training-sample propensity models use X and party, never outcomes.
+All three outcomes use the same sample/design, no significance-based selection.
+
+Forest: area-level GRF causal forest, not duplicated matched-pair rows.
+Four modifiers: log prior clean capacity, fossil capacity, clean announcements,
+area. Adjustment set: all nine design covariates plus state. Auxiliary outcome
+regression forest has 4000 trees and state clusters; use its out-of-bag
+predictions (own-state observations excluded). Outcome nuisance predictions for
+an unseen state cannot estimate its fixed intercept; do not claim otherwise.
+State adjustment enters the propensity and weighted evaluation; correct model
+and conditional parallel trends are still assumptions. Propensity is estimated
+in sample using baseline X/party to preserve state/mean balance; this is not a
+fully cluster-cross-fitted doubly robust DiD estimator.
+
+causal_forest: 4000 trees, honesty TRUE, sample.fraction .5, min.node.size 5,
+seed 72311, two threads, state clusters. W.hat is fitted propensity, NOT .5.
+Do not additionally pass arm-dependent overlap weights as sample.weights.
+Residualized splitting naturally emphasizes treatment variation. Report native
+GRF overlap average as a model-assisted diagnostic and t(G-1) intervals; native
+SE conditions on nuisance fits. The primary average comparison remains exact
+logistic overlap weighting with state bootstrap refitting weights.
+
+Meaning: conditional Republican-minus-Democratic response in investment changes
+among overlap areas, under conditional weighted parallel trends and no
+differential contemporaneous shocks. Both parties change majority status.
+This is NOT a national IRA effect or separately identified gain-vs-unaffected
+effect. CATE modifiers are not identified causal investment drivers.
+
+Validation: fixed numpy RNG seed 48123 permutes sorted 25 states; first floor(.4G)
+are held out. Train outcome models and ranking forest on training states ONLY;
+refit propensity on training baseline/party data. No held-out outcomes enter
+ranking or cutoff. Cutoff is training OOB prediction median weighted by e(1-e).
+Do not force a new evaluation cutoff if one group is sparse.
+
+Primary evaluation: high-minus-low exact-overlap weighted relative change using
+the previously verified full-design weights (no held-out outcomes in weights).
+Evaluate high/low effects, earlier placebo and trend sensitivity. Bootstrap
+held-out states 999 times conditional on fixed training data/rankings, refitting
+full-design propensity with training-state frequency one and resampled
+evaluation-state multiplicities. Require >=4 areas/arm, >=5 Kish ESS/arm,
+>=3 contributing states/group and >=4 evaluation states overall for a supported
+group comparison. Report raw point estimates even if support fails, clearly
+marked not inferentially reliable. Holm across three outcome ranking tests.
+
+Confounding audit: within each learned group report all nine weighted SMDs,
+state-share imbalance, ESS, event counts, contributing states and pre-placebo.
+Primary credibility threshold: max absolute SMD <=.10 including state indicators;
+nonrejection of a placebo does not establish equivalent trends.
+
+Secondary design-only repair: restrict to evaluation states having both parties
+in both high/low groups, then separately refit logistic overlap weights on all
+nine covariates plus state within each group. Report convergence/separation,
+ESS and losses. If >=95% of 999 bootstrap draws do not converge/support both
+groups, withhold interval. Do not select the version with favorable p-values.
+
+Weighted pre-trends: annual contrasts relative to 2022, full eligible sample,
+with refitted-weight state bootstrap covariance and joint F tests over pre-years.
+Capacity uses available 2017-22 history. Report all non-rejections as low-power
+diagnostics; early pre-outcomes already enter design.
+
+Reproduce into fresh output directory; hash inputs/code, compare deterministic
+CSV outputs, independently check full-weight contrasts and score algebra.
+Figures: weighted annual diagnostics and held-out ranking comparisons.
+Deliver empirical findings and code; do not revise the paper automatically.
